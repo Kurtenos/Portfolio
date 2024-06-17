@@ -1,0 +1,298 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+#navbar {
+    background-color: #333; /* Darker navigation bar */
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff; /* Light text color */
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    color: #ffffff; /* Light text color */
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative; /* Relative positioning for underline */
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 0;
+    height: 2px; /* Underline height */
+    background-color: #66b3cc; /* Accent color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    color: #ffffff; /* Light text color */
+    font-size: 1.5em;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #66b3cc; /* Accent color on hover */
+}
+
+/* Main content section styles */
+#main-doc {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.main-section {
+    margin-bottom: 40px;
+    background-color: #333; /* Darker section background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-section header {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Light text color */
+}
+
+.main-section a {
+    color: #66b3cc; /* Accent color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Scroll Up Arrow */
+#scrollUp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #66b3cc;
+    padding: 10px;
+    border-radius: 25%;
+    text-align: center;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+}
+
+#scrollUp i {
+    font-size: 1.5em;
+}
+
+/* Responsive design Nav Bar, For Mobile Devices */
+@media (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-bottom: 10px;
+    }
+
+    .nav-link, .social-link {
+        margin: 5px 0;
+    }
+}
+
+/* Pictures Diffrent Designs */
+#PC1 {
+    width: 150px;
+    height: 200px; /* Different height due to different resolution */
+    border-radius: 20%;
+}
+
+#certificate {
+    width: 300px; /* Width for the certificates */
+    height: auto;
+}
+
+#project-website {
+    width: 300px;
+    height: 200px;
+}
+
+/* Hover Images Effect*/
+.gallery img:hover {
+    transform: scale(1.05); /* Slightly scale up image on hover for visual feedback */
+    transition: transform 0.2s ease; /* Smooth transition when hovering over images */
+}
+
+/*Flexbox Container for Images and Descriptions */
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing between image sections */
+}
+
+.image-section img {
+    width: 150px; /* Set a fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20%; /* Rounded corners for a softer look */
+    margin-left: 20px;
+    object-fit: cover; /* Ensures images maintain aspect ratio and cover the allotted space */
+    cursor: pointer; /* Change cursor to pointer on hover for interactive feel */
+}
+
+.image-description {
+    flex: 1; /* Take remaining space beside images */
+    padding-left: 20px; /* Space between image and description */
+    margin: 0;
+}
+
+/* Images and Image desciprions, For Mobile Devices  */
+@media (max-width: 600px) {
+    .image-section {
+        flex-direction: column; /* Stack images and descriptions on small screens */
+        align-items: flex-start;
+    }
+
+    .image-description {
+        padding-left: 0; /* Remove padding on small screens */
+        margin-top: 10px; /* Adjust spacing between image and description */
+    }
+
+    .image-section img {
+        width: 100%; /* Full width for images on small screens */
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+}
+
+/* Common styles for images with the class 'image-link */
+.image-link {
+    width: 400px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio */
+    border: 2px solid #000; /* Adds a border around the image */
+    display: block; /* Ensures the image is a block element */
+    margin: 0 auto; /* Centers the image within the anchor tag */
+}
+
+/* Styles for description links */
+.description-link {
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Ensures block-level formatting */
+    text-align: center; /* Centers the text */
+    margin-top: 5px; /* Adds space between the image and the text */
+}
+
+/* Styles for the link descriptions */
+.link-description {
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #555; /* Adjust the color as needed */
+    display: flex; /* Aligns items in a row */
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    margin: 0; /* Removes default margin */
+}
+
+.link-description i {
+    margin-right: 5px; /* Adds space between the icon and the text */
+}
+
+/* Hover effect for description links */
+.description-link:hover .link-description {
+    color: #66b3cc; /* Changes color on hover */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black with opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Set width to 80% */
+    max-width: 700px; /* Set maximum width */
+    max-height: 100%;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff; /* White color */
+    font-size: 40px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    transition: 0.3s; /* Smooth transition */
+}
+
+.close:hover,
+.close:focus {
+    color: #66b3cc;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover/focus */
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+        height: auto;
+    }
+}
