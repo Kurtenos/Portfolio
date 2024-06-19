@@ -75,6 +75,23 @@ body {
     color: #66b3cc; /* Accent color on hover */
 }
 
+/* Responsive design Nav Bar, For Mobile Devices */
+@media (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-link, .social-link {
+        margin: 5px 0;
+    }
+}
+
 /* Main content section styles */
 #main-doc {
     max-width: 800px;
@@ -118,22 +135,6 @@ body {
 
 #scrollUp i {
     font-size: 1.5em;
-}
-
-/* Responsive design Nav Bar, For Mobile Devices */
-@media (max-width: 600px) {
-    #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        margin-bottom: 10px;
-    }
-
-    .nav-link, .social-link {
-        margin: 5px 0;
-    }
 }
 
 /* Pictures Diffrent Designs */
